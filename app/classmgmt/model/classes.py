@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from datetime import date, time
 from pydantic import BaseModel, Field
+from typing import Optional
 
 @dataclass
 class ClassBase(BaseModel):
@@ -15,7 +16,7 @@ class ClassBase(BaseModel):
     is_active: bool = Field(True, description="Indica se a Aula está ativa")
 
 class ClassCreate(ClassBase):
-    """✅ Modelo para criação (sem ID)"""
+    """✅ Modelo para criação   (sem ID)"""
     pass
 
 class Class(ClassBase):
