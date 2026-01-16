@@ -1,9 +1,8 @@
-from dataclasses import dataclass
 from datetime import date, time
 from pydantic import BaseModel, Field
 from typing import Optional
 
-@dataclass
+
 class ClassBase(BaseModel):
     name: str = Field(..., description="Nome completo da Aula")
     description: str = Field(..., description="Descrição da Aula")
